@@ -10,6 +10,8 @@ export function Home() {
   const { user, signInWithGoogle } = useAuth()
   const [roomCode, setRoomCode] = useState('');
 
+  console.log("USE AUTH", useAuth())
+
   async function handleCreateRoom() {
     if (!user) {
       await signInWithGoogle()
